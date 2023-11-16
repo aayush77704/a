@@ -16,7 +16,7 @@ jobs:
     - name: Merge changes
       run: |
         current_branch=$(git rev-parse --abbrev-ref HEAD)
-
+        echo $current_branch
         if [ "$current_branch" == "main" ]; then
           git checkout project1
           git merge main --no-edit
